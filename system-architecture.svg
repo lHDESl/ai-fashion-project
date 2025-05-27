@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000" height="700" viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="1000" height="700" fill="#ffffff"/>
+    
+    <!-- Title -->
+    <text x="500" y="60" fill="#333333" text-anchor="middle" font-family="'Noto Sans KR'" font-size="32" font-weight="bold">시스템 아키텍처</text>
+    
+    <!-- Input Module -->
+    <g transform="translate(80,150)">
+        <rect width="250" height="160" rx="15" fill="#2196F3" opacity="0.9"/>
+        <text x="125" y="50" fill="white" text-anchor="middle" font-family="'Noto Sans KR'" font-size="20" font-weight="bold">입력 모듈</text>
+        <text x="125" y="85" fill="white" text-anchor="middle" font-family="'Noto Sans KR'" font-size="16">• 실시간 영상 입력</text>
+        <text x="125" y="115" fill="white" text-anchor="middle" font-family="'Noto Sans KR'" font-size="16">• 이미지 파일 업로드</text>
+        <text x="125" y="145" fill="white" text-anchor="middle" font-family="'Noto Sans KR'" font-size="16">• OpenCV 전처리</text>
+    </g>
+    
+    <!-- YOLOv5 Processing Module -->
+    <g transform="translate(375,120)">
+        <rect width="300" height="220" rx="15" fill="#4CAF50" opacity="0.9"/>
+        <text x="150" y="50" fill="white" text-anchor="middle" font-family="'Noto Sans KR'" font-size="20" font-weight="bold">YOLOv5 처리</text>
+        <text x="150" y="90" fill="white" text-anchor="middle" font-family="'Noto Sans KR'" font-size="16">• 객체 탐지 (80% 정확도)</text>
+        <text x="150" y="125" fill="white" text-anchor="middle" font-family="'Noto Sans KR'" font-size="16">• 의류 분류 (13 카테고리)</text>
+        <text x="150" y="160" fill="white" text-anchor="middle" font-family="'Noto Sans KR'" font-size="16">• 바운딩 박스 생성</text>
+        <text x="150" y="195" fill="white" text-anchor="middle" font-family="'Noto Sans KR'" font-size="16">• Roboflow 데이터셋</text>
+    </g>
+    
+    <!-- Analysis Module -->
+    <g transform="translate(375,380)">
+        <rect width="300" height="180" rx="15" fill="#FFC107" opacity="0.9"/>
+        <text x="150" y="50" fill="#333" text-anchor="middle" font-family="'Noto Sans KR'" font-size="20" font-weight="bold">분석 처리</text>
+        <text x="150" y="90" fill="#333" text-anchor="middle" font-family="'Noto Sans KR'" font-size="16">• 의류 속성 분석</text>
+        <text x="150" y="125" fill="#333" text-anchor="middle" font-family="'Noto Sans KR'" font-size="16">• 날씨 데이터 연동</text>
+        <text x="150" y="160" fill="#333" text-anchor="middle" font-family="'Noto Sans KR'" font-size="16">• 코디 추천 알고리즘</text>
+    </g>
+    
+    <!-- Output Module -->
+    <g transform="translate(720,225)">
+        <rect width="250" height="180" rx="15" fill="#9C27B0" opacity="0.9"/>
+        <text x="125" y="50" fill="white" text-anchor="middle" font-family="'Noto Sans KR'" font-size="20" font-weight="bold">출력 모듈</text>
+        <text x="125" y="90" fill="white" text-anchor="middle" font-family="'Noto Sans KR'" font-size="16">• 실시간 결과 표시</text>
+        <text x="125" y="125" fill="white" text-anchor="middle" font-family="'Noto Sans KR'" font-size="16">• 의류 정보 출력</text>
+        <text x="125" y="160" fill="white" text-anchor="middle" font-family="'Noto Sans KR'" font-size="16">• 코디 추천 결과</text>
+    </g>
+    
+    <!-- Arrows -->
+    <g stroke="#666" stroke-width="4">
+        <!-- Input to YOLO -->
+        <path d="M330,230 L375,230" fill="none" marker-end="url(#arrowhead)"/>
+        <!-- YOLO to Output -->
+        <path d="M675,230 L720,315" fill="none" marker-end="url(#arrowhead)"/>
+        <!-- YOLO to Analysis -->
+        <path d="M525,340 L525,380" fill="none" marker-end="url(#arrowhead)"/>
+        <!-- Analysis to Output -->
+        <path d="M675,470 L845,405" fill="none" marker-end="url(#arrowhead)"/>
+    </g>
+    
+    <!-- Arrow Marker -->
+    <defs>
+        <marker id="arrowhead" markerWidth="12" markerHeight="8" refX="11" refY="4" orient="auto">
+            <polygon points="0 0, 12 4, 0 8" fill="#666"/>
+        </marker>
+    </defs>
+    
+    <!-- Module Labels -->
+    <g font-family="'Noto Sans KR'" font-size="14" fill="#666" font-weight="500">
+        <text x="350" y="210" text-anchor="middle">영상/이미지</text>
+        <text x="700" y="210" text-anchor="middle">객체 탐지</text>
+        <text x="540" y="360" text-anchor="middle">분석 요청</text>
+        <text x="760" y="445" text-anchor="middle">추천 결과</text>
+    </g>
+</svg> 

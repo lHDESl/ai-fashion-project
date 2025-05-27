@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOLO를 활용한 의류분류 딥러닝</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo-section">
+                <img src="CI.GIF" alt="백석대학교 로고" class="university-logo">
+                <div class="logo">AI Fashion Assistant</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">홈</a></li>
+                <li><a href="#overview">개요</a></li>
+                <li><a href="#architecture">시스템 구성</a></li>
+                <li><a href="#features">주요 기능</a></li>
+                <li><a href="#tech">기술 스택</a></li>
+                <li><a href="#schedule">프로젝트 일정</a></li>
+                <li><a href="#demo">시연 영상</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="university-info">
+        <div class="container">
+            <div class="info-item">
+                <i class="fas fa-university"></i>
+                <span>백석대학교 첨단IT학부</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <span>지도교수: 차대현 교수님</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span>2025 딥러닝 프로젝트</span>
+            </div>
+        </div>
+    </div>
+
+    <section id="home" class="hero">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="container">
+            <h1>AI Fashion Assistant</h1>
+            <p class="hero-subtitle">YOLOv5 기반의 실시간 의류 분석 및 스타일링 플랫폼</p>
+            <div class="hero-buttons">
+                <a href="#demo" class="cta-button">시연 영상 보기</a>
+                <a href="#overview" class="cta-button">자세히 알아보기</a>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+                <p>스크롤하여 더 보기</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="overview" class="overview">
+        <div class="container">
+            <h2>프로젝트 소개</h2>
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <h3>프로젝트 개요</h3>
+                    <ul class="overview-list">
+                        <li>YOLOv5 기반 실시간 의류 분류</li>
+                        <li>영상 데이터 기반 딥러닝 모델</li>
+                        <li>자동화된 의류 인식 시스템</li>
+                        <li>시각적 결과 표시 및 저장</li>
+                    </ul>
+                </div>
+                <div class="overview-card">
+                    <h3>주요 산출물</h3>
+                    <ul class="overview-list">
+                        <li>데이터 전처리/학습 코드</li>
+                        <li>YOLOv5 기반 학습 모델</li>
+                        <li>의류 분류 애플리케이션</li>
+                        <li>프로젝트 문서 및 보고서</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule" class="schedule">
+        <div class="container">
+            <h2>프로젝트 일정</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>1-3주차</h3>
+                    <p>프로젝트 주제선정 및 조편성</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>4-5주차</h3>
+                    <p>착수보고 및 데이터 수집/전처리</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>6-8주차</h3>
+                    <p>모델 개발/학습 및 중간보고</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>9-11주차</h3>
+                    <p>딥러닝 학습 및 테스트</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>12-13주차</h3>
+                    <p>시연, 오류개선 및 최종보고</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="architecture" class="architecture">
+        <div class="container">
+            <h2>시스템 구성</h2>
+            <div class="architecture-content">
+                <div class="system-diagram">
+                    <img src="system-architecture.svg" alt="시스템 아키텍처 다이어그램" class="arch-image">
+                </div>
+                <div class="data-flow">
+                    <h3>데이터 흐름도</h3>
+                    <div class="flow-steps">
+                        <div class="flow-step">
+                            <span class="step-number">1</span>
+                            <p>실시간 영상/이미지 입력</p>
+                        </div>
+                        <div class="flow-step">
+                            <span class="step-number">2</span>
+                            <p>YOLOv5 객체 탐지</p>
+                        </div>
+                        <div class="flow-step">
+                            <span class="step-number">3</span>
+                            <p>의류 분류 및 분석</p>
+                        </div>
+                        <div class="flow-step">
+                            <span class="step-number">4</span>
+                            <p>결과 시각화 및 저장</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>주요 기능</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📹</div>
+                    <h3>실시간 영상 처리</h3>
+                    <p>실시간 객체 탐지 및 의류 인식</p>
+                    <div class="feature-details">
+                        <ul>
+                            <li>실시간 의류 분류</li>
+                            <li>이미지 파일 처리</li>
+                            <li>실시간 추천 기능</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>의류 분석</h3>
+                    <p>YOLOv5 기반 의류 객체 탐지</p>
+                    <div class="feature-details">
+                        <ul>
+                            <li>80% 이상 분류 정확도</li>
+                            <li>25epoch 모델 학습</li>
+                            <li>Roboflow API 연동</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>시스템 관리 (개발 예정)</h3>
+                    <p>사용자 인터페이스 및 관리 기능</p>
+                    <div class="feature-details">
+                        <ul>
+                            <li>GUI 환경 구현</li>
+                            <li>데이터 저장 기능</li>
+                            <li>모델 최적화</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech" class="tech-stack">
+        <div class="container">
+            <h2>기술 스택</h2>
+            <div class="tech-hexagon">
+                <div class="tech-card">
+                    <h3>개발 환경</h3>
+                    <p>통합 개발 도구</p>
+                    <ul class="tech-details">
+                        <li>VS Code</li>
+                        <li>Google Colab Pro</li>
+                        <li>Cursor AI</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h3>주요 기술</h3>
+                    <p>프레임워크 및 라이브러리</p>
+                    <ul class="tech-details">
+                        <li>TensorFlow</li>
+                        <li>OpenCV</li>
+                        <li>ChatGPT/Perplexity</li>
+                    </ul>
+                </div>
+                <div class="tech-card">
+                    <h3>학습 환경</h3>
+                    <p>Google Colab Pro</p>
+                    <ul class="tech-details">
+                        <li>TESLA-T4 GPU</li>
+                        <li>Roboflow Dataset</li>
+                        <li>하이퍼파라미터 튜닝</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="demo">
+        <div class="container">
+            <h2>시연 영상</h2>
+            <div class="demo-content">
+                <div class="demo-video">
+                    <img src="demo-placeholder.jpg" alt="시연 영상" class="demo-placeholder">
+                </div>
+                <div class="demo-description">
+                    <h3>실시간 시연</h3>
+                    <p>실시간 의류 감지 및 날씨 기반 코디 추천 시스템 시연</p>
+                    <ul class="demo-features">
+                        <li>실시간 의류 카테고리 감지</li>
+                        <li>현재 날씨 정보 표시</li>
+                        <li>날씨 기반 의류 추천</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="future" class="future">
+        <div class="container">
+            <h2>향후 발전 방향</h2>
+            <div class="future-grid">
+                <div class="future-card">
+                    <h3>기능 개선</h3>
+                    <ul>
+                        <li>의류 카테고리 확장</li>
+                        <li>개인화 기능 추가</li>
+                        <li>추천 알고리즘 고도화</li>
+                    </ul>
+                </div>
+                <div class="future-card">
+                    <h3>기술 개선</h3>
+                    <ul>
+                        <li>모델 성능 최적화</li>
+                        <li>처리 속도 향상</li>
+                        <li>메모리 사용량 개선</li>
+                    </ul>
+                </div>
+                <div class="future-card">
+                    <h3>서비스 확장</h3>
+                    <ul>
+                        <li>모바일 앱 개발</li>
+                        <li>온라인 서비스 연동</li>
+                        <li>사용자 데이터 분석</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="CI.GIF" alt="백석대학교 로고" class="footer-logo">
+                    <p>백석대학교 첨단IT학부</p>
+                    <p>지도교수: 차대현 교수님</p>
+                </div>
+                <div class="footer-section">
+                    <h3>프로젝트 정보</h3>
+                    <p>2025 딥러닝 프로젝트</p>
+                    <p>YOLOv5 기반 의류 분류 시스템</p>
+                </div>
+                <div class="footer-section">
+                    <h3>기술 스택</h3>
+                    <p>YOLOv5 • TensorFlow</p>
+                    <p>OpenCV • Python</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AI Fashion Assistant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
