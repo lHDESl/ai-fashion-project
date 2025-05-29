@@ -20,7 +20,7 @@
         <rect width="300" height="220" rx="15" fill="#4CAF50" opacity="0.9"/>
         <text x="150" y="50" fill="white" text-anchor="middle" font-family="'Noto Sans KR'" font-size="20" font-weight="bold">YOLOv5 처리</text>
         <text x="150" y="90" fill="white" text-anchor="middle" font-family="'Noto Sans KR'" font-size="16">• 객체 탐지 (80% 정확도)</text>
-        <text x="150" y="125" fill="white" text-anchor="middle" font-family="'Noto Sans KR'" font-size="16">• 의류 분류 (13 카테고리)</text>
+        <text x="150" y="125" fill="white" text-anchor="middle" font-family="'Noto Sans KR'" font-size="16">• 의류 분류 (7 카테고리)</text>
         <text x="150" y="160" fill="white" text-anchor="middle" font-family="'Noto Sans KR'" font-size="16">• 바운딩 박스 생성</text>
         <text x="150" y="195" fill="white" text-anchor="middle" font-family="'Noto Sans KR'" font-size="16">• Roboflow 데이터셋</text>
     </g>
